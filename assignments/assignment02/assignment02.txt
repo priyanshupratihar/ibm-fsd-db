@@ -32,3 +32,5 @@ inner join Payments P on P.customerNumber=C.customerNumber group by E.firstName 
 
 
 6.customers who has not any order for all products
+
+select customerName from customers where customerNumber not in (select distinct(customerNumber) from orders);
